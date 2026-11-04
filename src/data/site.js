@@ -2,6 +2,7 @@
 export const phone = '2730512181';
 export const address = 'Av. Copacabana, 317 - Morada de Laranjeiras, Serra - ES, 29166-820';
 export const placeId = 'ChIJAxYeCgAduAARobQTGoCxXrQ';
+export const publicAsset = file => `${import.meta.env.BASE_URL}${file.replace(/^\/+/, '')}`;
 
 export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}&query_place_id=${placeId}`;
 export const mapEmbedUrl = `https://maps.google.com/maps?hl=pt-BR&q=${encodeURIComponent(address)}&z=14&output=embed`;
@@ -19,10 +20,10 @@ export const services = [
 ];
 
 export const servicePhotos = [
-  { src: '/images/carro-em-revisao.png', alt: 'Carro em revisão em um elevador automotivo' },
-  { src: '/images/equipe-em-servico.png', alt: 'Mecânicos trabalhando na parte inferior de um carro' },
-  { src: '/images/fachada-noturna-hq.png', alt: 'Fachada da TCM Auto Center à noite' },
-  { src: '/images/motor-detalhe-hq.png', alt: 'Detalhe de um motor automotivo' }
+  { src: publicAsset('images/carro-em-revisao.png'), alt: 'Carro em revisão em um elevador automotivo' },
+  { src: publicAsset('images/equipe-em-servico.png'), alt: 'Mecânicos trabalhando na parte inferior de um carro' },
+  { src: publicAsset('images/fachada-noturna-hq.png'), alt: 'Fachada da TCM Auto Center à noite' },
+  { src: publicAsset('images/motor-detalhe-hq.png'), alt: 'Detalhe de um motor automotivo' }
 ];
 
 // Comentários copiados da imagem enviada pela loja, usados como contingência da API.
@@ -45,7 +46,7 @@ export const referenceReviews = [
 ];
 
 export const partnerBrands = [
-  { src: '/images/marca-honda.png', alt: 'Honda' },
-  { src: '/images/marca-lubrax.png', alt: 'Lubrax' },
-  { src: '/images/marca-petronas.png', alt: 'Petronas' }
+  { src: publicAsset('images/marca-honda.png'), alt: 'Honda' },
+  { src: publicAsset('images/marca-lubrax.png'), alt: 'Lubrax' },
+  { src: publicAsset('images/marca-petronas.png'), alt: 'Petronas' }
 ];

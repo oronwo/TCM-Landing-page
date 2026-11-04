@@ -14,7 +14,7 @@ export default function ReviewsSection() {
   useEffect(() => {
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 7000);
-    fetch('/api/reviews', { signal: controller.signal })
+    fetch(`${import.meta.env.BASE_URL}api/reviews`, { signal: controller.signal })
       .then(async response => {
         if (!response.ok) throw new Error('Reviews API unavailable');
         return response.json();

@@ -1,10 +1,10 @@
 import Icon from './Icon.jsx';
-import { address, mapsUrl, phone } from '../data/site.js';
+import { address, mapsUrl, phone, publicAsset } from '../data/site.js';
 
 // Abertura do site com foto da fachada, chamada principal e contatos da loja.
 export default function Hero() {
   return <section className="hero" id="inicio" aria-labelledby="hero-title">
-    <img className="hero-image" src="/images/fachada.png" alt="Fachada da TCM Auto Center" />
+    <img className="hero-image" src={publicAsset('images/fachada.png')} alt="Fachada da TCM Auto Center" />
     <div className="hero-shade"/><div className="hero-content wrap reveal">
       <p className="eyebrow"><span/> CENTRO AUTOMOTIVO <span/></p>
       <h1 id="hero-title">TCM Auto<br/><em>Center</em></h1>

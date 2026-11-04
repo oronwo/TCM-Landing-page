@@ -59,3 +59,9 @@ src/
 ## Produção
 
 `npm run build` gera os arquivos estáticos em `dist/`. O frontend e o endpoint de avaliações devem ser publicados sob o mesmo domínio (ou com proxy CORS configurado pelo servidor). Não inclua `.env` no repositório.
+
+### GitHub Pages
+
+O workflow `.github/workflows/pages.yml` compila o Vite e publica `dist/` sempre que houver push para `main`. Em **Settings → Pages → Build and deployment**, selecione **GitHub Actions** como fonte. O `base` do Vite já considera a subpasta `/TCM-Landing-page/` usada pelo endereço do projeto, sem alterar o servidor de desenvolvimento local.
+
+O GitHub Pages serve arquivos estáticos e não executa `server.js`. Para buscar avaliações ao vivo, hospede o endpoint Express em um serviço de backend; sem ele, o frontend usa os comentários de contingência.
